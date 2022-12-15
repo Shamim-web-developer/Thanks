@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta property="og:image"  content="https://img.freepik.com/premium-vector/banner-speech-bubble-thank-you_136321-98.jpg?w=740" />
+    <link rel="preload" href="thanks.jpg" type="image/jpeg" />
+    <title>Thanks</title>
+  </head>
+  <style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+    body 
+    {
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      padding: 0;
+      display: fixed;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      background: #1f1b24;
+    }
+    #container 
+    {
+      display: none;
+      animation: flash 1s;
+    }
+    @keyframes flash 
+    {
+      0% 
+      {
+        opacity: 0;
+      }
+      100% 
+      {
+        opacity: 1;
+      }
+    }
+    #text 
+    {
+      color: #fff;
+      text-align: center;
+      font-family: 'Carter One',cursive;
+      font-size: 1.8em;
+      text-shadow: 2px 5px 5px #111,
+                   2px 5px 10px #fff;
+    }
+    #thanks 
+    {
+      width: 100vw;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+  <body onload="pageload()">
+    <div id=container>
+    <p id="text">Thanks! <br /> For Your Feedback..</p>
+    <img id="thanks" src="thanks.jpg" />
+    </div>
+  </body>
+  
+  <script type="text/javascript" charset="utf-8">
+    var box = document.getElementById('container');
+    function pageload(){
+      box.style.display="block";
+      setTimeout(()=>{
+        history.back();
+    },2500);
+    }
+  </script>
+</html>
