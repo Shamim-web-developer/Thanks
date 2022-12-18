@@ -64,7 +64,12 @@
     function pageload(){
       box.style.display="block";
       setTimeout(()=>{
+        if ((1 < history.length) && document.referrer) {
         history.back();
+      } else {
+        // If you can't go back in history, you could perhaps close the window ?
+        window.close();
+      }
     },2500);
     }
   </script>
